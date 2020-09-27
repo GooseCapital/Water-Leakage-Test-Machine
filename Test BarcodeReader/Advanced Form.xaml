@@ -1,0 +1,67 @@
+﻿<Window x:Name="AdvancedMode" x:Class="Test_BarcodeReader.AdvancedForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_BarcodeReader"
+        mc:Ignorable="d"
+        Title="Advanced_Form" Height="464.5" Width="715" Loaded="AdvancedMode_Loaded" Closing="AdvancedMode_Closing">
+    <Grid>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="85,10,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,27,0,0" TextWrapping="Wrap" Text="Van cấp áp 2" VerticalAlignment="Top"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="85,76,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="Van xả áp" VerticalAlignment="Top"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="303,145,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,162,0,0" TextWrapping="Wrap" Text="Kẹp bình" VerticalAlignment="Top"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="303,13,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Van chế độ áp"/><Run Text=" (24)"/></TextBlock>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="303,79,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,96,0,0" TextWrapping="Wrap" Text="Van chế độ lưu lượng (26)" VerticalAlignment="Top" RenderTransformOrigin="0.513,1.003"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="85,145,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" Text="Xì khí 1" VerticalAlignment="Top"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="85,211,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,228,0,0" TextWrapping="Wrap" Text="Xì khí 2" VerticalAlignment="Top"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="303,275,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,228,0,0" TextWrapping="Wrap" Text="Ngả 1" VerticalAlignment="Top" RenderTransformOrigin="0.406,1.188"/>
+        <Button Content="Tắt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="303,211,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,292,0,0" TextWrapping="Wrap" Text="Ngả 2" VerticalAlignment="Top"/>
+        <Image Height="333" Margin="371,0,0,0" VerticalAlignment="Top" Source="IMG_0279.JPG" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" HorizontalAlignment="Left" Width="433" Grid.ColumnSpan="2">
+            <Image.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.LayoutTransform>
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Ellipse x:Name="StPressurePump" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="491,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnPressurePump" HorizontalAlignment="Left" Margin="491,27,0,0" VerticalAlignment="Top" Width="27" Height="74" Opacity="0" Click="BtnPressurePump_Click"/>
+        <Ellipse x:Name="StAirPush2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="538,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnAirPush2" Content="Button" HorizontalAlignment="Left" Margin="532,35,0,0" VerticalAlignment="Top" Width="30" Height="28" Opacity="0"/>
+        <Ellipse x:Name="StAirPush1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="540,94,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnAirPush1" HorizontalAlignment="Left" Margin="533,88,0,0" VerticalAlignment="Top" Width="30" Height="28" Opacity="0"/>
+        <Ellipse x:Name="StFlowrateValve" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="510,111,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnFlowrateValve" HorizontalAlignment="Left" Margin="505,106,0,0" VerticalAlignment="Top" Width="25" Height="48" Opacity="0"/>
+        <Ellipse x:Name="StPressureOut2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="515,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnPressureOut2" HorizontalAlignment="Left" Margin="512,178,0,0" VerticalAlignment="Top" Width="26" Height="48" Opacity="0"/>
+        <Ellipse x:Name="StPressureIn2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="515,283,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnPressureIn2" HorizontalAlignment="Left" Margin="510,265,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0"/>
+        <Ellipse x:Name="StWaterPressure" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="587,283,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnWaterPressure" HorizontalAlignment="Left" Margin="583,270,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0"/>
+        <Ellipse x:Name="StWaterPump" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="556,375,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnWaterPump" HorizontalAlignment="Left" Margin="545,363,0,0" VerticalAlignment="Top" Width="44" Height="48" Opacity="0"/>
+        <Ellipse x:Name="StValve3Way" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="444,160,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnValve3Way" HorizontalAlignment="Left" Margin="432,145,0,0" VerticalAlignment="Top" Width="44" Height="43" Opacity="0"/>
+
+
+    </Grid>
+</Window>
