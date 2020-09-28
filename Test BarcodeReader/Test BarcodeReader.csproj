@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\DeviceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +119,11 @@
   <ItemGroup>
     <Resource Include="IMG_0279.JPG" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="IMG_0282.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG_0283.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
