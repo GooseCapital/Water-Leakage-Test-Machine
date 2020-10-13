@@ -5,14 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test_BarcodeReader"
         mc:Ignorable="d"
-        Title="MainWindow" Height="213.02" Width="420.535" Closing="Window_Closing" Loaded="Window_Loaded">
+        Title="Water Leakage Machine" Height="389.02" Width="770.535" Closing="Window_Closing" Loaded="Window_Loaded" KeyDown="Window_KeyDown">
     <Grid>
-        <Button x:Name="BtnModel1" Content="Model 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="15,72,0,0" Height="100" PreviewMouseDown="BtnModel1_PreviewMouseDown" PreviewMouseUp="BtnModel1_PreviewMouseUp"/>
-        <Button x:Name="BtnModel2" Content="Model 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="153,72,0,0" Height="100" PreviewMouseDown="BtnModel2_PreviewMouseDown" PreviewMouseUp="BtnModel2_PreviewMouseUp"/>
-        <Button x:Name="BtnModel3" Content="Model 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="297,72,0,0" Height="100" PreviewMouseDown="BtnModel3_PreviewMouseDown" PreviewMouseUp="BtnModel3_PreviewMouseUp"/>
-        <Button x:Name="BtnConnection" Content="Disconnected" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="100" Height="49" Click="BtnConnection_Click"/>
-        <Button x:Name="BtnStart" Content="Choose Model" HorizontalAlignment="Left" Margin="153,10,0,0" VerticalAlignment="Top" Width="100" Height="49" PreviewMouseDown="BtnStart_PreviewMouseDown" Click="BtnStart_Click"/>
-        <Button x:Name="BtnAdvanced" Content="Advanced Mode" HorizontalAlignment="Left" Height="49" Margin="297,10,0,0" VerticalAlignment="Top" Width="100" Click="BtnAdvanced_Click"/>
+        <Button x:Name="BtnModel1" Content="Model 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="200,15,0,0" Height="30" PreviewMouseDown="BtnModel1_PreviewMouseDown" PreviewMouseUp="BtnModel1_PreviewMouseUp" Visibility="Hidden"/>
+        <Button x:Name="BtnModel2" Content="Model 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="305,15,0,0" Height="30" PreviewMouseDown="BtnModel2_PreviewMouseDown" PreviewMouseUp="BtnModel2_PreviewMouseUp" Visibility="Hidden"/>
+        <Button x:Name="BtnModel3" Content="Model 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="410,15,0,0" Height="30" PreviewMouseDown="BtnModel3_PreviewMouseDown" PreviewMouseUp="BtnModel3_PreviewMouseUp" RenderTransformOrigin="0.96,0.4" Visibility="Hidden"/>
+        <Button x:Name="BtnStart" Content="Choose Model" HorizontalAlignment="Left" Margin="597,10,0,0" VerticalAlignment="Top" Width="100" Height="35" PreviewMouseDown="BtnStart_PreviewMouseDown" Click="BtnStart_Click" Visibility="Hidden"/>
+        <Label Content="Serial Code" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TbSerialCode" Height="23" Margin="90,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="659"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" Source="141549_1498107299_0001.jpg" RenderTransformOrigin="0.389,0.6"/>
+        <ListView x:Name="LvProducts" Height="190" Margin="10,158,14,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsGoodProduct}" Value="True">
+                            <Setter Property="Background" Value="Green"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsGoodProduct}" Value="False">
+                            <Setter Property="Background" Value="Yellow"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding SentToServer}" Value="False">
+                            <Setter Property="Background" Value="Red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="No" Width="40" DisplayMemberBinding="{Binding No}" />
+                    <GridViewColumn Header="Barcode" Width="200" DisplayMemberBinding="{Binding RawBarCode}" />
+                    <GridViewColumn Header="ProductCode" Width="80" DisplayMemberBinding="{Binding ProductCode}" />
+                    <GridViewColumn Header="PlantCode" Width="70" DisplayMemberBinding="{Binding PlantCode}" />
+                    <GridViewColumn Header="Year" Width="40" DisplayMemberBinding="{Binding Year}" />
+                    <GridViewColumn Header="Day" Width="40" DisplayMemberBinding="{Binding Day}" />
+                    <GridViewColumn Header="Line" Width="40" DisplayMemberBinding="{Binding LineCode}" />
+                    <GridViewColumn Header="Serial" Width="80" DisplayMemberBinding="{Binding SerialNumber}" />
+                    <!-- <GridViewColumn Header="Type" Width="40" DisplayMemberBinding="{Binding TypeName}" /> -->
+                    <GridViewColumn Header="Is Good" Width="60" DisplayMemberBinding="{Binding IsGoodProduct}" />
+                    <GridViewColumn Header="Is Send" Width="60" DisplayMemberBinding="{Binding SentToServer}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="11,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"><Run Text="Total Checked Products:"/></TextBlock>
+        <TextBlock x:Name="TblNumberCheckedProduct" HorizontalAlignment="Left" Margin="209,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="0" FontSize="18"/>
+        <TextBlock x:Name="TblTextBarcode" HorizontalAlignment="Left" Margin="380,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"><Run Text="Barcode: "/></TextBlock>
 
     </Grid>
 </Window>

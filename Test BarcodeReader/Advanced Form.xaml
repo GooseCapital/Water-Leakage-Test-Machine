@@ -51,10 +51,10 @@
         <Button x:Name="BtnFlowrateValve" HorizontalAlignment="Left" Margin="505,106,0,0" VerticalAlignment="Top" Width="25" Height="48" Opacity="0" Click="BtnFlowrateValve_Click"/>
         <Ellipse x:Name="StPressureOut2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="515,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
         <Button x:Name="BtnPressureOut2" HorizontalAlignment="Left" Margin="512,178,0,0" VerticalAlignment="Top" Width="26" Height="48" Opacity="0" Click="BtnPressureOut2_Click"/>
-        <Ellipse x:Name="StPressureIn2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="515,283,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
-        <Button x:Name="BtnPressureIn2" HorizontalAlignment="Left" Margin="510,265,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0" Click="BtnPressureIn2_Click"/>
-        <Ellipse x:Name="StWaterPressure" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="587,283,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
-        <Button x:Name="BtnWaterPressure" HorizontalAlignment="Left" Margin="583,270,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0" Click="BtnWaterPressure_Click"/>
+        <Ellipse x:Name="StPressureIn2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="585,283,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnPressureIn2" HorizontalAlignment="Left" Margin="585,283,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0" Click="BtnPressureIn2_Click"/>
+        <Ellipse x:Name="StWaterPressure" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="515,275,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
+        <Button x:Name="BtnWaterPressure" HorizontalAlignment="Left" Margin="512,270,0,0" VerticalAlignment="Top" Width="32" Height="48" Opacity="0" Click="BtnWaterPressure_Click"/>
         <Ellipse x:Name="StWaterPump" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="556,375,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>
         <Button x:Name="BtnWaterPump" HorizontalAlignment="Left" Margin="545,363,0,0" VerticalAlignment="Top" Width="44" Height="48" Opacity="0" Click="BtnWaterPump_Click"/>
         <Ellipse x:Name="StValve3Way" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Margin="444,160,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.926,0.216"/>

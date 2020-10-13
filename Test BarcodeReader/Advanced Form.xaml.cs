@@ -1,8 +1,10 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Test_BarcodeReader.Controller;
@@ -39,7 +41,7 @@ namespace Test_BarcodeReader
         public DeviceInfo PressureOut2DeviceInfo = new DeviceInfo("M513", "M514", "Y013", "Y014");
         public DeviceInfo PressureIn2DeviceInfo = new DeviceInfo("M511", "M512", "Y011", "Y012");
         public DeviceInfo WaterPressureDeviceInfo = new DeviceInfo("M524", "M525", "Y024", "Y025");
-        public DeviceInfo WaterPumpDeviceInfo = new DeviceInfo("M517", "M517", "Y017", "Y017");
+        public DeviceInfo WaterPumpDeviceInfo = new DeviceInfo("M517", "M609", "Y017", "Y017");
         public DeviceInfo Valve3WayDeviceInfo = new DeviceInfo("M522", "M523", "Y022", "Y023");
         public DeviceInfo JigProductDeviceInfo = new DeviceInfo("M520", "M521", "Y020", "Y021");
 
@@ -163,11 +165,10 @@ namespace Test_BarcodeReader
                 GetStatusValve(Valve3WayDeviceInfo);
                 GetStatusValve(WaterPressureDeviceInfo);
                 GetStatusValve(FlowrateValveDeviceInfo);
-
+                GetStatusValve(JigProductDeviceInfo); //Clamp Status
 
                 // GetStatusValve("Y011", "Y012", ref StatusPressureIn2);
                 // GetStatusValve("Y013", "Y014", ref StatusPressureOut2);
-                // // GetStatusValve("Y020", "Y021", Status); //Clamp Status
                 // GetStatusValve("Y022", "Y023", ref StatusValve3Way);
                 // GetStatusValve("Y024", "Y025", ref StatusWaterPressure);
                 // GetStatusValve("Y026", "Y027", ref StatusFlowrateValve);
@@ -329,7 +330,7 @@ namespace Test_BarcodeReader
 
         private void BtnWaterPump_Click(object sender, RoutedEventArgs e)
         {
-            ChangeStatusPump(WaterPumpDeviceInfo);
+            ChangeStatusValve(WaterPumpDeviceInfo);
         }
 
         private void BtnPressureIn2_2_Click(object sender, RoutedEventArgs e)
